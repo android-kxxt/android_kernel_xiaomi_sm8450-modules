@@ -35,7 +35,7 @@ struct gh_acl_desc *sde_vm_populate_acl(enum gh_vm_names vm_name)
 	struct gh_acl_desc *acl_desc;
 	gh_vmid_t vmid;
 
-	gh_rm_get_vmid(vm_name, &vmid);
+	ghd_rm_get_vmid(vm_name, &vmid);
 
 	acl_desc = kzalloc(offsetof(struct gh_acl_desc, acl_entries[1]),
 			   GFP_KERNEL);
